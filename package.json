@@ -1,0 +1,32 @@
+
+{
+  "name": "cpsc349-exercise4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pocketbase": "pocketbase serve",
+    "esbuild": "esbuild src/app.jsx --outfile=pb_public/app.js --watch",
+    "browsersync": "browser-sync http://localhost:8090 --files 'pb_public/**/*'",
+    "start": "npm-run-all --parallel esbuild pocketbase browsersync"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unasir335/CPSC349-assignment4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unasir335/CPSC349-assignment4/issues"
+  },
+  "homepage": "https://github.com/unasir335/CPSC349-assignment4#readme",
+  "dependencies": {
+    "esbuild": "0.16.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
